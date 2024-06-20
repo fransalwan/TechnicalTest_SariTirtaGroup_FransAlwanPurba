@@ -1,48 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BR Architects</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-      <div class="container projects">
-        <h1>
-          <a href="index.html" style="text-decoration: none">BR Architects</a>
-        </h1>
         <nav>
-          <ul class="nav-links">
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-          <div class="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+            <div class="logo">BR Architects</div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
         </nav>
-      </div>
     </header>
     <main>
-      <div class="hero">
-        <span>
-          <div class="overlay">
-            <h2>BR</h2>
-          </div></span
-        >Architects
-      </div>
-    </main>
-  </body>
-  <script>
-    const burger = document.querySelector(".burger");
-    const navLinks = document.querySelector("nav ul");
+        <section id="home" class="hero">
+            <div class="hero-overlay">
+                <h1>BR Architects</h1>
+            </div>
+        </section>
+        <section id="projects" class="projects-section">
+            <h2 style="text-align: left;">Projects</h2>
+            <div class="projects-gallery">
+                <div class="project">
+                    <img src="img/p1.jpg" alt="Summer House">
+                    <div class="overlay">Summer House</div>
+                </div>
+                <div class="project">
+                    <img src="img/p2.jpg" alt="Brick House">
+                    <div class="overlay">Brick House</div>
+                </div>
+                <div class="project">
+                    <img src="img/p3.jpg" alt="Renovated">
+                    <div class="overlay">Renovated</div>
+                </div>
+                <div class="project">
+                    <img src="img/p4.jpg" alt="Barn House">
+                    <div class="overlay">Barn House</div>
+                </div>
+                <!-- Repeat as necessary for more projects -->
+            </div>
+        </section>
 
-    burger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      burger.classList.toggle("active");
-    });
-  </script>
+        <section id="about" class="about-section">
+            <h2 style="text-align: left;">About</h2>
+            <p style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="team">
+                
+                <div class="team-member">
+                    <img src="img/a2.jpg" alt="Jane Doe">
+                    <h3>Jane Doe</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button style="width: 100%;">Contact</button>
+                </div>
+                <div class="team-member">
+                    <img src="img/a3.jpg" alt="Mike Ross">
+                    <h3>Mike Ross</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button style="width: 100%;">Contact</button>
+                </div>
+                <div class="team-member">
+                    <img src="img/a4.jpg" alt="Dan Star">
+                    <h3>Dan Star</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <button style="width: 100%;">Contact</button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+    /* Mobile styles */
+    @media (max-width: 600px) {
+        #contact {
+            padding: 10px; /* Adjust as needed */
+        }
+
+        #contact h2 {
+            /* font-size: 20px; */
+            /* Komentar atau hapus aturan yang mengubah ukuran font */
+        }
+
+        /* Other adjustments for input fields, labels, and buttons */
+        /* Example: */
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact textarea {
+            font-size: 14px; /* Adjust as needed */
+        }
+    }
+</style>
+
+<style>
+    /* Styles for the contact form */
+    #contact {
+        /* background: #f9f9f9; */
+        padding: 20px;
+        border-radius: 10px;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+
+    #contact h2 {
+        /* font-size: 24px; */
+        /* margin-bottom: 20px; */
+        font-size: 24px; /* Tambahkan ukuran font tetap jika diperlukan */
+    }
+
+    #contact label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #contact input[type="text"],
+    #contact input[type="email"],
+    #contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+    }
+
+    #contact textarea {
+        resize: vertical;
+    }
+
+    #contact button[type="submit"] {
+        background-color: black;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #contact button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<section id="contact">
+    <h2 style="text-align: left;">Contact</h2>
+    <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+</section>
+
+
+    </main>
+    <script src="scripts.js"></script>
+</body>
 </html>

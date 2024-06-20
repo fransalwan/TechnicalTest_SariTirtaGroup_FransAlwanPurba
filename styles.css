@@ -1,272 +1,272 @@
-/* General Styles */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h2, nav, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
 }
 
-h1 a {
-  text-decoration: none;
-  color: black;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-/* Header Styles */
 header {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-header h1 {
-  font-size: 20px;
-  margin: 0;
-  letter-spacing: 2px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.logo {
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-nav ul li {
-  margin-left: 20px;
+.menu {
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease;
+.menu a {
+    margin: 0 15px;
+    color: black;
 }
 
-nav ul li a:hover {
-  color: #000;
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-/* Hamburger Menu */
-.burger {
-  display: none;
-  cursor: pointer;
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('img/bg-home.jpg'); /* Ensure the image path is correct */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.burger .line {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 5px;
-  transition: transform 0.4s ease;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Main Content Styles */
-main {
-  padding: 100px 20px 20px; /* Adjust padding to account for fixed header */
+.hero-overlay h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.projects {
-  max-width: 1200px;
-  margin: 0 auto;
+.projects-section {
+    padding: 50px 20px;
 }
 
-.projects h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+.projects-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .project {
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
+    position: relative;
+    width: calc(25% - 20px); /* Adjust based on the number of columns and gap */
 }
 
 .project img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+    width: 100%;
+    display: block;
 }
 
-.project h4 {
-  font-size: 20px;
-  margin: 10px 0;
+.project .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
 }
 
-/* Main Content Styles Index */
-
-.hero {
-  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d5");
-  background-size: cover;
-  background-position: center;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about-section {
+    padding: 50px 20px;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
-.overlay h2 {
-  font-size: 48px;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow effect */
+.about-section p {
+    /* text-align: center; */
+    margin-bottom: 30px;
+    /* max-width: 800px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    color: #666;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    /* text-align: center; */
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 50%; */
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.team-member p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.team-member button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.team-member button:hover {
+    background-color: #333;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    width: 150px; /* Adjust width as needed */
-    padding: 10px;
-    border-radius: 5px;
-  }
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
 
-  nav ul.active {
-    display: flex;
-  }
+    .menu-icon {
+        display: block;
+    }
 
-  nav ul li {
-    margin: 10px 0;
-  }
+    .menu a {
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        border-top: 1px solid #e0e0e0;
+    }
 
-  .container {
-    position: relative;
-  }
+    .hero-overlay h1 {
+        font-size: 2em;
+        padding: 0 20px;
+        text-align: center;
+    }
 
-  .burger {
-    display: block;
-  }
+    .projects-gallery {
+        flex-direction: column;
+    }
 
-  .burger.active .line:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
+    .project {
+        width: 100%;
+    }
 
-  .burger.active .line:nth-child(2) {
-    opacity: 0;
-  }
+    .team-member {
+        width: 100%;
+    }
 
-  .burger.active .line:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    /* Styles for the contact form */
+#contact {
+    background: url('path/to/your-background-image.jpg') center/cover;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
 }
 
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 16px;
-  }
+#contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-  .projects h2 {
-    font-size: 28px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project h4 {
-    font-size: 18px;
-  }
-
-  /* Reset default styles */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
-
-  .container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .contact-form {
-    display: grid;
-    gap: 20px;
-  }
-
-  .form-control {
-    display: grid;
-    gap: 5px;
-  }
-
-  .form-control label {
+#contact label {
+    display: block;
     font-weight: bold;
-  }
+    margin-bottom: 10px;
+}
 
-  .form-control input,
-  .form-control textarea {
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
+}
 
-  .form-control textarea {
+#contact textarea {
     resize: vertical;
-  }
+}
 
-  button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
+#contact button[type="submit"] {
+    background-color: #007bff;
     color: #fff;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s ease;
-  }
+}
 
-  button[type="submit"]:hover {
-    background-color: #555;
-  }
+#contact button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
 }
