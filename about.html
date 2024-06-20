@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BR Architects - About Us</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container projects">
+        <h1><a href="index.html">BR Architects</a></h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="projects">
+        <h2>About Us</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+        <h3>Our Team</h3>
+        <div class="project-grid">
+          <div class="project">
+            <img
+              src="https://picsum.photos/id/1005/200/300"
+              alt="Team Member 1"
+            />
+            <h4>John Doe</h4>
+            <p>CEO & Founder</p>
+          </div>
+          <div class="project">
+            <img
+              src="https://picsum.photos/id/1006/200/300"
+              alt="Team Member 2"
+            />
+            <h4>Jane Doe</h4>
+            <p>Architect</p>
+          </div>
+          <div class="project">
+            <img
+              src="https://picsum.photos/id/1008/200/300"
+              alt="Team Member 3"
+            />
+            <h4>Mike Ross</h4>
+            <p>Architect</p>
+          </div>
+          <div class="project">
+            <img
+              src="https://picsum.photos/id/1004/200/300"
+              alt="Team Member 4"
+            />
+            <h4>Dan Star</h4>
+            <p>Architect</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const burger = document.querySelector(".burger");
+      const navLinks = document.querySelector("nav ul");
+
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burger.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BR Architects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container projects">
+        <h1>
+          <a href="index.html" style="text-decoration: none">BR Architects</a>
+        </h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <span>
+          <div class="overlay">
+            <h2>BR</h2>
+          </div></span
+        >Architects
+      </div>
+    </main>
+  </body>
+  <script>
+    const burger = document.querySelector(".burger");
+    const navLinks = document.querySelector("nav ul");
+
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      burger.classList.toggle("active");
+    });
+  </script>
+</html>
